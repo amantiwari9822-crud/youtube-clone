@@ -1,0 +1,238 @@
+        body{
+            margin: 0;
+            padding: 80px 24px 40px 96px;
+            background-color: rgb(248, 248, 248);
+            font-family: Roboto,Arial,sans-serif;
+        }
+        button, input{
+            font-family: inherit;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            height: 55px;
+            border-bottom: 1px solid lightgray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 100;
+        }
+        .middle-section{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            margin: auto 35px auto 66px;
+            max-width: 500px;
+        }
+        .ytsearch{
+            flex: 1;
+            height: 36px;
+            font-size: 16px;
+            padding-left: 12px;
+            border: 1px solid lightgray;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+            box-shadow: inset 1px 2px 2px rgba(0,0,0,0.03);
+            width: 0;
+            min-width: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ytsearch:focus{
+            outline: 1px solid blue;
+            outline-offset: -1px;
+        }
+        .ytsearch::placeholder{
+            color: rgb(137, 137, 137);
+        }
+        .voice-search{
+            height: 24px;
+        }
+        .voice-search-b{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgb(248, 248, 248);
+        }
+        .search-logo{
+            height: 25px;
+        }
+        .search-logo-b{
+            margin-right: 10px;
+            border: 1px solid lightgray;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            margin-left: 0px;
+            height: 39px;
+            width: 60px;
+            background-color: rgb(248, 248, 248);
+        }
+        .search-logo-b,.voice-search-b,.button{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tooltip{
+            background-color: rgba(85, 85, 85, 0.9);
+            color: white;
+            border-radius: 2px;
+            padding: 8px;
+            position: absolute;
+            font-size: 12px;
+            bottom: -50px;
+            opacity: 0;
+            transition: opacity 0.15s;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        button:hover .tooltip,.button:hover .tooltip{
+            opacity: 1;
+        }
+        .left-section{
+            display: flex;
+            align-items: center;
+        }
+        .ham{
+            height: 25px;
+            margin: 0px 24px;
+        }
+        .logo{
+            height: 20px;
+        }
+        .right-section{
+            width: 187px;
+            display: flex;
+            margin-right: 24px;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        .upload{
+            height: 25px;
+        }
+        .apps{
+            height: 24px;
+        }
+        .notifications{
+            height: 24px;
+        }
+        .notifications-div{
+            position: relative;
+        }
+        .no-of-notif{
+            position: absolute;
+            right: -7px;
+            top: -4px;
+            background-color: rgb(200, 0, 0);
+            color: white;
+            font-family: Roboto,Arial;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .user-profile{
+            height: 32px;
+            border-radius: 50%;
+        }
+                .sidebar{
+                    position: fixed;
+                    top: 55px;
+                    bottom: 0;
+                    left: 0;
+                    width: 72px;
+                    padding-top: 5px;
+                    background-color: white;
+                    z-index: 150;
+                }
+                .sicon{
+                    width: 100%;
+                    border: none;
+                    height: 74px;
+                    font-size: 10px;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    padding: 0;
+                }
+                .sicon:hover{
+                    background-color: rgb(235, 235, 235);
+                }
+                .sicon img{
+                    margin-bottom: 6px;
+                    height: 24px;
+                }
+        .ytgrid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
+        }
+        @media (max-width:550px) {
+            .ytgrid{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (min-width:550px) and (max-width:800px) {
+            .ytgrid{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width:1200px) {
+            .ytgrid{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+        .thumbnail{
+            width: 100%;
+        }
+        .video-time{
+            position:absolute;
+            top: -52px;
+            right: 4px;
+            background-color: black;
+            color: white;
+            padding: 4px;
+            font-size: 12px;
+            border-radius: 2px;
+            z-index: 3;
+        }
+        .video-info{
+            margin-top: 8px;
+            display: grid;
+            grid-template-columns: 36px 1fr;
+            position: relative;
+        }
+        .channel-icon{
+            width: 100%;
+            border-radius: 50%;
+        }
+        .video-description{
+            display: grid;
+            margin-right: 0;
+            margin-left: 12px;
+        }
+        .video-title{
+            margin: 0;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-bottom: 11px;
+        }
+        .channel-name{
+            margin: 0;
+            color: rgb(96,96,96);
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        .views{
+            margin: 0;
+            font-size: 12px;
+            color: rgb(96,96,96);
+        }
